@@ -32,7 +32,7 @@
             this.lbl_userame = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -73,19 +73,19 @@
             this.lbl_password.Size = new System.Drawing.Size(237, 30);
             this.lbl_password.TabIndex = 3;
             // 
-            // button1
+            // btn_login
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(54, 268);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(237, 34);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_login.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_login.FlatAppearance.BorderSize = 0;
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Location = new System.Drawing.Point(54, 268);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(237, 34);
+            this.btn_login.TabIndex = 4;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // Form1
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(345, 419);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_userame);
@@ -111,7 +111,7 @@
         private System.Windows.Forms.TextBox lbl_userame;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox lbl_password;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_login;
     }
 }
 

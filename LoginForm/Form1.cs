@@ -17,18 +17,17 @@ namespace LoginForm
         public Form1()
         {
             InitializeComponent();
-
-
-        }
-
-        String connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=login;";
+        }  
 
         public void login() 
         { 
-            string query = "SELECT * FROM userlogin WHERE username='" + lbl_userame.Text + "' AND password='" + lbl_password.Text + "'";
-            MySqlConnection conn = new MySqlConnection(connectionString);
+            string query = "SELECT * FROM userlogin WHERE username= @username AND password= @password";
+            MySqlConnection conn = DBConnection.getConnection();
+
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.CommandTimeout = 60;
+            cmd.Parameters.AddWithValue("@username", lbl_userame.Text);
+            cmd.Parameters.AddWithValue("@password", lbl_password.Text);
             MySqlDataReader reader;
 
             try
@@ -57,7 +56,7 @@ namespace LoginForm
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
             login();
         }
