@@ -40,7 +40,9 @@ namespace LoginForm
                 {
                     while (reader.Read())
                     {
-                        MessageBox.Show("Login Successful");
+                        int userId = reader.GetInt32("ID");
+                        string username = reader.GetString("Username");
+                        MessageBox.Show("Login Successful. Welcome user " + userId + ": " + username);
                     }
                 }
                 else 
