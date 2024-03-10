@@ -60,5 +60,15 @@ namespace LoginForm
         {
             login();
         }
+
+        private void lbl_signup_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            signup signups= new signup();
+            signups.Show();
+
+            
+        }
     }
 }
