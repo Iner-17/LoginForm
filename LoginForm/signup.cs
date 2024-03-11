@@ -18,7 +18,6 @@ namespace LoginForm
         {
             InitializeComponent();
         }
-
         private void lbl_login_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
@@ -26,7 +25,6 @@ namespace LoginForm
 
             this.Close();
         }
-
         public void signup_() {
             string query = "INSERT INTO userlogin (Username, Password) VALUES (@username, @password)";
             MySqlConnection conn = DBConnection.getConnection();
